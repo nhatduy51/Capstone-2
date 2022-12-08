@@ -39,7 +39,7 @@ function App() {
         </Route>
         <Route path={path.SYSTEM} element={<System />} >
           <Route path={path.CREATE_POST} element={<CreatePost />} />
-        </Route>
+        </Route> 
 
       </Routes>
     </div>
