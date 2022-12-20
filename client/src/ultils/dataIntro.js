@@ -1,5 +1,5 @@
 export const text = {
-    title: 'Tại sao lại chọn PhongTro123.com?',
+    title: 'Tại sao lại chọn AIO FIND HOUSE?',
     description: 'Chúng tôi biết bạn có rất nhiều lựa chọn, nhưng Phongtro123.com tự hào là trang web đứng top google về các từ khóa: ',
     description2: '...Vì vậy tin của bạn đăng trên website sẽ tiếp cận được với nhiều khách hàng hơn, do đó giao dịch nhanh hơn, tiết kiệm chi phí hơn',
     statistic: [

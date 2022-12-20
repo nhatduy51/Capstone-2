@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import logo from '../../assets/logowithoutbg.png'
+import logo from '../../assets/logo.png'
 import { Button, User } from '../../components'
 import icons from '../../ultils/icons'
 import { useNavigate, Link, useSearchParams } from 'react-router-dom'

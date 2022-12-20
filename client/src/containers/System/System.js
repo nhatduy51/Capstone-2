@@ -6,7 +6,7 @@ import { Header , Sidebar } from './'
 
 const System = () => {
   const { isLoggedIn } = useSelector( state => state.auth);
-  console.log(isLoggedIn)
+  // console.log(isLoggedIn)
   
   if (!isLoggedIn) return < Navigate to= {`/${path.LOGIN}`} replace = {true} />
   return (
@@ -14,7 +14,7 @@ const System = () => {
       < Header />
       <div className='flex w-full flex-auto'>
         <Sidebar />
-        <div className='flex-auto bg-white shadow-md h-full p-4'>
+        <div className='flex-auto bg-white shadow-md h-full p-4 overflow-y-scroll'>
           < Outlet />
         </div>
       </div>
