@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getPostsLimit } from '../../store/actions'
 import { Slider } from '../../components'
 import icons from '../../ultils/icons';
-import Map from '../../components/Map';
+import { Map, BoxInfo, RelatedPost } from '../../components';
 import { MapDesc } from '../../ultils/constant'
 
 const { HiLocationMarker, TbReportMoney, RiCrop2Line, BsStopwatch, BsHash } = icons;
@@ -54,16 +54,16 @@ const DetailPost = () => {
                         </div>
                     </div>
                     <div className='mt-8'>
-                        <h3 className='font-semibold text-lg'>Thông tin mô tả</h3>
+                        <h3 className='font-semibold text-lg mb-4'>Thông tin mô tả</h3>
                         <div className='flex- flex-col gap-3'>
                             <span>{posts[0].description && JSON.parse(posts[0].description)}</span>
                         </div>
                     </div>
                     <div className='mt-8'>
-                        <h3 className='font-semibold text-lg'>Đặc điểm tin đăng</h3>
-                        <table>
-                            <tbody>
-                                <tr className='bg-gray-200'>
+                        <h3 className='font-semibold text-lg mb-4'>Đặc điểm tin đăng</h3>
+                        <table className='w-full'>
+                            <tbody className='w-full'>
+                                <tr className='bg-gray-200 w-full'>
                                     <td className='p-2'>Mã tin</td>
                                     <td className='p-2'>{posts[0]?.overviews?.code}</td>
                                 </tr>
@@ -96,9 +96,9 @@ const DetailPost = () => {
                     </div>
                     <div className='mt-8'>
                         <h3 className='font-semibold text-lg'>Thông tin liên hệ</h3>
-                        <table>
-                            <tbody>
-                                <tr>
+                        <table className='w-full'>
+                            <tbody className='w-full'>
+                                <tr className='w-full'>
                                     <td className='p-2'>Liên hệ</td>
                                     <td className='p-2'>{posts[0]?.user?.name}</td>
                                 </tr>
@@ -116,7 +116,7 @@ const DetailPost = () => {
                     {
                         posts && (
                             <div className='mt-8'>
-                                <h3>Google Map</h3>
+                                <h3 className='font-semibold'>Bản đồ</h3>
                                 <Map address={posts[0]?.address} />
                                 <span className='text-gray-500 text-sm text-justigy'>
                                     {`${MapDesc[0]}`}
@@ -133,6 +133,8 @@ const DetailPost = () => {
                 </div>
             </div>
             <div className='w-[30%]'>
+                <BoxInfo user={posts[0]?.user} />
+                <RelatedPost />
             </div>
         </div>
     )
